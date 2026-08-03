@@ -1,0 +1,7 @@
+.firebase/
+.wrangler/
+
+*.pdf
+*.txt
+
+current-site.html
