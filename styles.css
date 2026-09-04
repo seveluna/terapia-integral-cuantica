@@ -510,6 +510,35 @@ body.theme-book::before {
   border-radius: var(--radius-lg);
 }
 
+.journey-gallery {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.journey-gallery figure {
+  min-height: 238px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  background: var(--panel);
+}
+
+.journey-gallery img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 420ms ease;
+}
+
+.journey-gallery figure:hover img {
+  transform: scale(1.035);
+}
+
 .trust-strip strong {
   display: block;
   margin-bottom: 8px;
@@ -604,6 +633,21 @@ body.theme-book::before {
   gap: 22px;
   padding: 28px;
   border-radius: var(--radius-xl);
+}
+
+.offer-image {
+  margin: 22px 0 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(157, 134, 255, 0.16);
+}
+
+.offer-image img {
+  width: 100%;
+  max-height: 210px;
+  display: block;
+  object-fit: cover;
+  object-position: center 56%;
 }
 
 .price-card {
@@ -958,6 +1002,32 @@ body.theme-book::before {
   border-radius: var(--radius-xl);
 }
 
+.community-content {
+  display: grid;
+  grid-template-columns: 1fr 0.68fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.community-content .section-heading {
+  margin-bottom: 0;
+}
+
+.community-image {
+  height: 246px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.community-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: right center;
+}
+
 .testimonial-grid blockquote {
   margin: 0;
 }
@@ -1123,6 +1193,37 @@ body.theme-book::before {
   place-items: center;
 }
 
+.book-scene {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 28px;
+  align-items: center;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.book-scene-image {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  min-height: 320px;
+}
+
+.book-scene-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.book-scene-copy {
+  margin: 0;
+}
+
 .book-photo-frame {
   width: min(360px, 84%);
   border-radius: 28px;
@@ -1227,7 +1328,9 @@ body.theme-book::before {
   .media-callout-card,
   .media-feature-card,
   .author-feature,
-  .trust-strip {
+  .trust-strip,
+  .book-scene,
+  .community-content {
     grid-template-columns: 1fr;
   }
 
@@ -1249,6 +1352,14 @@ body.theme-book::before {
   .funnel-grid,
   .funnel-grid.compact {
     grid-template-columns: 1fr;
+  }
+
+  .journey-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .journey-gallery-main {
+    grid-column: span 2;
   }
 
   .retreat-form-grid {
@@ -1395,6 +1506,18 @@ body.theme-book::before {
   .hero,
   .book-hero {
     padding-top: 16px;
+  }
+
+  .journey-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-gallery-main {
+    grid-column: auto;
+  }
+
+  .journey-gallery figure {
+    min-height: 220px;
   }
 
   .section {
