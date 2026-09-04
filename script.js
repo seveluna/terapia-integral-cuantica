@@ -17,6 +17,17 @@ document
     observer.observe(node);
   });
 
+const stickyHeader = document.querySelector(".modern-redesign .site-header");
+
+if (stickyHeader) {
+  const updateHeaderAppearance = () => {
+    stickyHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+  };
+
+  updateHeaderAppearance();
+  window.addEventListener("scroll", updateHeaderAppearance, { passive: true });
+}
+
 document.querySelectorAll("[data-slider]").forEach((slider) => {
   const track = slider.querySelector("[data-slider-track]");
   const slides = [...track.children];
