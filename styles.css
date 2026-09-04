@@ -74,7 +74,12 @@
 }
 
 .modern-redesign.theme-home:not(.theme-media) .hero {
+  width: 100vw;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
   padding-top: 142px;
+  padding-right: max(32px, calc((100vw - var(--max-width)) / 2));
+  padding-left: max(32px, calc((100vw - var(--max-width)) / 2));
 }
 
 .modern-redesign .button {
@@ -246,8 +251,17 @@
 }
 
 .modern-redesign .visual-statement {
-  margin-top: 70px;
+  width: 100vw;
+  min-height: 620px;
+  margin-top: 84px;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
   border-radius: 0;
+}
+
+.modern-redesign .visual-statement-copy {
+  padding-right: max(32px, calc((100vw - var(--max-width)) / 2));
+  padding-left: max(32px, calc((100vw - var(--max-width)) / 2));
 }
 
 .modern-redesign .visual-statement-copy h2 {
@@ -365,10 +379,23 @@
     border-radius: 26px;
   }
 
+  .modern-redesign.theme-home:not(.theme-media) .hero {
+    padding: 138px 22px 30px;
+    border-radius: 0;
+  }
+
   .modern-redesign .hero {
     min-height: 620px;
-    padding-top: 138px;
     background-position: 61% center;
+  }
+
+  .modern-redesign .visual-statement {
+    min-height: 580px;
+    margin-top: 58px;
+  }
+
+  .modern-redesign .visual-statement-copy {
+    padding: 28px 22px;
   }
 
   .modern-redesign .hero h1,
