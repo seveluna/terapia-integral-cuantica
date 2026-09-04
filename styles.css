@@ -635,18 +635,32 @@ body.theme-book::before {
   border-radius: var(--radius-xl);
 }
 
+.offer-spotlight-with-image {
+  grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.62fr) minmax(230px, 0.72fr);
+  align-items: stretch;
+}
+
 .offer-image {
-  margin: 22px 0 0;
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  margin: 0;
+  padding: 10px;
   overflow: hidden;
   border-radius: var(--radius-md);
   border: 1px solid rgba(157, 134, 255, 0.16);
-  background: rgba(255, 255, 255, 0.72);
+  background:
+    radial-gradient(circle at 50% 8%, rgba(255, 245, 219, 0.72), transparent 36%),
+    linear-gradient(145deg, rgba(255, 253, 255, 0.96), rgba(246, 238, 255, 0.94));
 }
 
 .offer-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 14px 30px rgba(69, 53, 139, 0.14);
 }
 
 .price-card {
@@ -1020,11 +1034,11 @@ body.theme-book::before {
 }
 
 .community-image img {
-  width: 100%;
-  height: 100%;
+  width: 260%;
+  max-width: none;
+  height: auto;
   display: block;
-  object-fit: cover;
-  object-position: right center;
+  transform: translateX(-59%);
 }
 
 .testimonial-grid blockquote {
@@ -1359,6 +1373,14 @@ body.theme-book::before {
 
   .journey-gallery-main {
     grid-column: span 2;
+  }
+
+  .offer-spotlight-with-image .offer-image {
+    min-height: 0;
+  }
+
+  .offer-spotlight-with-image .offer-image img {
+    height: auto;
   }
 
   .retreat-form-grid {
