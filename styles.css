@@ -640,14 +640,13 @@ body.theme-book::before {
   overflow: hidden;
   border-radius: var(--radius-md);
   border: 1px solid rgba(157, 134, 255, 0.16);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .offer-image img {
   width: 100%;
-  max-height: 210px;
+  height: auto;
   display: block;
-  object-fit: cover;
-  object-position: center 56%;
 }
 
 .price-card {
