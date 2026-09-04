@@ -37,6 +37,10 @@
     #fbf5ef;
 }
 
+.modern-redesign .page-shell {
+  position: relative;
+}
+
 .modern-redesign .site-header {
   padding: 18px 0;
   backdrop-filter: none;
@@ -52,9 +56,12 @@
 }
 
 .modern-redesign.theme-home:not(.theme-media) .site-header {
-  position: relative;
-  z-index: 3;
-  margin-bottom: -88px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  margin: 0;
 }
 
 .modern-redesign.theme-home:not(.theme-media) .brand,
@@ -77,6 +84,7 @@
   width: 100vw;
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
+  border-radius: 0;
   padding-top: 142px;
   padding-right: max(32px, calc((100vw - var(--max-width)) / 2));
   padding-left: max(32px, calc((100vw - var(--max-width)) / 2));
@@ -140,6 +148,23 @@
   color: #ffffff;
   font-size: clamp(2.4rem, 4.3vw, 4.5rem);
   text-shadow: none;
+}
+
+.modern-redesign .hero .button {
+  color: #ffffff;
+  background: #51366e;
+  border-color: transparent;
+}
+
+.modern-redesign .hero .button-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.72);
+}
+
+.modern-redesign .hero .button-secondary:hover,
+.modern-redesign .hero .button-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .modern-redesign .hero-card {
@@ -221,6 +246,16 @@
 .modern-redesign .testimonial-grid blockquote + blockquote {
   padding-left: 22px;
   border-left: 1px solid var(--line);
+}
+
+.modern-redesign .journey-choice .material-symbols-outlined {
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 16px;
+  color: #80649d;
+  font-size: 2.15rem;
+  line-height: 42px;
 }
 
 .modern-redesign .offer-spotlight {
@@ -364,7 +399,7 @@
 
 @media (max-width: 720px) {
   .modern-redesign.theme-home:not(.theme-media) .site-header {
-    margin-bottom: -112px;
+    top: 0;
   }
 
   .modern-redesign .site-header {
