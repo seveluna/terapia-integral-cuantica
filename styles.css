@@ -2102,7 +2102,7 @@ body.theme-book::before {
 }
 
 /* Upcoming courses form an editorial two-column feature rather than a card. */
-.modern-redesign .community-section {
+.modern-redesign .upcoming-course-feature {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
   gap: clamp(32px, 6vw, 84px);
@@ -2112,7 +2112,7 @@ body.theme-book::before {
   border-bottom: 1px solid var(--line);
 }
 
-.modern-redesign .community-section .section-heading {
+.modern-redesign .upcoming-course-feature .section-heading {
   align-self: center;
   margin: 0;
 }
@@ -2146,7 +2146,7 @@ body.theme-book::before {
     padding-left: 12px;
   }
 
-  .modern-redesign .community-section {
+  .modern-redesign .upcoming-course-feature {
     grid-template-columns: 1fr;
     gap: 28px;
     padding: 28px 0;
@@ -2155,6 +2155,23 @@ body.theme-book::before {
   .modern-redesign .course-feature-image {
     min-height: 260px;
   }
+}
+
+/* Show the complete Circle of the Soul artwork without the legacy crop. */
+.modern-redesign .circle-soul-image {
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.modern-redesign .circle-soul-image img {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
 }
 
 /* The book page shares the same lilac-and-cream atmosphere as the home. */
