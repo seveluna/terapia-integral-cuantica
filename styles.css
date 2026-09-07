@@ -2156,3 +2156,47 @@ body.theme-book::before {
     min-height: 260px;
   }
 }
+
+/* The book page shares the same lilac-and-cream atmosphere as the home. */
+body.modern-redesign.theme-book {
+  background:
+    radial-gradient(circle at 10% 16%, rgba(255, 226, 202, 0.72), transparent 26%),
+    radial-gradient(circle at 90% 34%, rgba(206, 188, 231, 0.44), transparent 28%),
+    #fbf5ef;
+}
+
+body.modern-redesign.theme-book::before {
+  background:
+    radial-gradient(circle at 16% 20%, rgba(255, 255, 255, 0.3), transparent 18%),
+    radial-gradient(circle at 84% 42%, rgba(163, 130, 203, 0.12), transparent 24%),
+    linear-gradient(transparent 95%, rgba(70, 49, 95, 0.025) 100%);
+}
+
+/* Keep the book navigation content aligned while its colour spans the viewport. */
+.modern-redesign.theme-book .site-header.simple {
+  background: transparent;
+  box-shadow: none;
+}
+
+.modern-redesign.theme-book .site-header.simple::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+  width: 100vw;
+  background: rgba(36, 23, 57, 0.96);
+  box-shadow: 0 8px 24px rgba(31, 17, 48, 0.2);
+  transform: translateX(-50%);
+}
+
+.modern-redesign.theme-book .site-header.simple .brand,
+.modern-redesign.theme-book .site-header.simple .brand-copy small,
+.modern-redesign.theme-book .site-header.simple .button-ghost {
+  color: #ffffff;
+}
+
+.modern-redesign.theme-book .site-header.simple .button-ghost {
+  border-color: rgba(255, 255, 255, 0.54);
+}
