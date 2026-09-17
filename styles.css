@@ -1528,14 +1528,14 @@ body.theme-book::before {
 
 .video-testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
 }
 
 .testimonial-short {
   aspect-ratio: 9 / 16;
-  width: min(100%, 293px);
-  max-height: 520px;
+  width: min(100%, 360px);
+  max-height: 640px;
   margin-inline: auto;
 }
 
