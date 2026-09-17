@@ -1528,8 +1528,15 @@ body.theme-book::before {
 
 .video-testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
+}
+
+.testimonial-short {
+  aspect-ratio: 9 / 16;
+  width: min(100%, 293px);
+  max-height: 520px;
+  margin-inline: auto;
 }
 
 .video-testimonial-card {
@@ -1836,6 +1843,10 @@ body.theme-book::before {
     grid-template-columns: 1fr;
   }
 
+  .video-testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .offer-spotlight-with-image .offer-image {
     min-height: 0;
   }
@@ -1888,6 +1899,10 @@ body.theme-book::before {
 }
 
 @media (max-width: 720px) {
+  .video-testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
   .retreat-modal-dialog {
     max-height: calc(100vh - 16px);
     margin: 8px auto;
